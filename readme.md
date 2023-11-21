@@ -73,3 +73,13 @@ The `cfid` can be tricky to configure right. I believe you will need to setup a 
 
 6. Verify it's working by testing your [worker](https://dash.cloudflare.com/?to=/:account/workers)
 7. Remove the debug var and enjoy weekly metric emails ☕
+
+# 🤖 Automation
+I have automatted builds which require setting these two GitHub Action secrets:
+
+> this will deploy the worker on any push to the main branch
+
+```sh
+CLOUDFLARE_API_TOKEN=
+CLOUDFLARE_ACCOUNT=
+```
