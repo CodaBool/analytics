@@ -77,7 +77,7 @@ The `cfid` can be tricky to configure right. I believe you will need to setup a 
 # 🤖 Automation
 I have automatted builds which require setting these two GitHub Action secrets:
 
-> this will deploy the worker on any push to the main branch
+> this will deploy the worker on any push to the main branch. Keep in mind Global API keys are not allowed for this. You will need to crate a scoped token [here](https://dash.cloudflare.com/profile/api-tokens)
 
 ```sh
 CLOUDFLARE_API_TOKEN=
