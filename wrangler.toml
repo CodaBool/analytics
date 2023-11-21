@@ -1,0 +1,8 @@
+name = "analytics"
+main = "src/index.ts"
+compatibility_date = "2023-11-21"
+usage_model = "unbound"
+env = { }
+
+[triggers]
+crons = [ ]
