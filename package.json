@@ -1,13 +1,12 @@
 {
   "name": "analytics",
-  "version": "0.0.0",
-  "private": true,
+  "type": "module",
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev"
+    "start": "node --env-file .dev.vars local.js"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.17.0"
   }
 }

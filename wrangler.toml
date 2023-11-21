@@ -1,8 +1,11 @@
 name = "analytics"
-main = "src/index.ts"
+main = "main.js"
 compatibility_date = "2023-11-21"
-usage_model = "unbound"
-env = { }
+
+[vars]
+DOMAIN="codabool.com"
+NAME="CodaBool"
+DEBUG=false
 
 [triggers]
-crons = [ ]
+crons = [ "0 0 * * *" ]
