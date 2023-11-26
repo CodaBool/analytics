@@ -21,10 +21,13 @@ EMAIL=destination@email.com
 
 Update the DOMAIN & NAME variable found in wrangler.toml
 
+> create a new line for `DEBUG=true` to help with your initial deploy
+
 ```toml
 [vars]
 DOMAIN="pom-pom-purin.com"
 NAME="Hacker"
+DEBUG=true
 ```
 
 # 🥾 Usage
@@ -71,8 +74,8 @@ v=mc1 auth=codabool.com cfid=codabool.workers.dev
 
 The `cfid` can be tricky to configure right. I believe you will need to setup a subdomain for your workers on this [page](https://dash.cloudflare.com/?to=/:account/workers). Also keep in mind that since these are DNS changes it can take a couple minutes to propgate and testing record changes may not be reflected immediately.
 
-6. Verify it's working by testing your [worker](https://dash.cloudflare.com/?to=/:account/workers). This worker is only runnable through a scheduled cron atm. So, put it on a * * * * * cron and activate a log stream.
-7. Remove the debug var and enjoy weekly metric emails ☕
+6. Verify it's working by testing your [worker](https://dash.cloudflare.com/?to=/:account/workers). This worker is only runnable through a scheduled cron in it's current state. So, put it on a `* * * * *` cron at the triggers tab. Then activate a log stream to capture a log event for debugging.
+7. Once verified working remove the debug var. set to a `0 0 * * *` and enjoy weekly metric emails ☕
 
 # 🤖 Automation
 I have automatted builds which require setting these two GitHub Action secrets:
