@@ -75,12 +75,12 @@ v=mc1 auth=codabool.com cfid=codabool.workers.dev
 The `cfid` can be tricky to configure right. I believe you will need to setup a subdomain for your workers on this [page](https://dash.cloudflare.com/?to=/:account/workers). Also keep in mind that since these are DNS changes it can take a couple minutes to propgate and testing record changes may not be reflected immediately.
 
 4. Verify it's working by testing your [worker](https://dash.cloudflare.com/?to=/:account/workers). This worker is only runnable through a scheduled cron in it's current state. So, put it on a `* * * * *` cron at the triggers tab. Then activate a log stream to capture a log event for debugging.
-5. Once verified working remove the debug var. set to a daily cron of `0 9 * * *` and enjoy weekly (unless past alarm state it will email daily) metric emails ☕
+5. Once verified working, set the debug var to `false` in the worker settings. set to a daily cron of `0 9 * * *` and enjoy weekly (unless past alarm state it will email daily) metric emails ☕
 
 # 🤖 Automation
 I have automatted builds which require setting these two GitHub Action secrets:
 
-> this will deploy the worker on any push to the main branch. Keep in mind Global API keys are not allowed for this. You will need to crate a scoped token [here](https://dash.cloudflare.com/profile/api-tokens)
+> this will deploy the worker on any push to the main branch. Keep in mind Global API keys are not allowed for this. You will need to create a scoped token [here](https://dash.cloudflare.com/profile/api-tokens)
 
 ```sh
 CLOUDFLARE_API_TOKEN=
