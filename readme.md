@@ -71,7 +71,7 @@ v=mc1 auth=codabool.com cfid=codabool.workers.dev
 
 The `cfid` can be tricky to configure right. I believe you will need to setup a subdomain for your workers on this [page](https://dash.cloudflare.com/?to=/:account/workers). Also keep in mind that since these are DNS changes it can take a couple minutes to propgate and testing record changes may not be reflected immediately.
 
-6. Verify it's working by testing your [worker](https://dash.cloudflare.com/?to=/:account/workers)
+6. Verify it's working by testing your [worker](https://dash.cloudflare.com/?to=/:account/workers). This worker is only runnable through a scheduled cron atm. So, put it on a * * * * * cron and activate a log stream.
 7. Remove the debug var and enjoy weekly metric emails ☕
 
 # 🤖 Automation
