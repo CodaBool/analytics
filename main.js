@@ -1,5 +1,5 @@
 export default {
-  async fetch(req, env) {
+  async scheduled(event, env, ctx) {
 
     const date = new Date()
     date.setDate(1) // set to first of the month
